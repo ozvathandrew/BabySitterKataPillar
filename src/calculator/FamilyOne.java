@@ -18,7 +18,10 @@ public class FamilyOne {
 	}
 	
 	
-	// Hope this works
+	public int secondPayCalc(int startTime, int endTime) {
+		int payment = 0; 
+		return payment; 
+	}
 	
 
 }

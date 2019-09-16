@@ -22,9 +22,19 @@ public class FamilyOneTest {
 		
 		// Act 
 		int result = familyOne.firstPayCalc(5,6);
-		System.out.print(result);
 		int expected = 15; 
 		// Assert 
+		Assert.assertEquals(expected, result);
+		
+	}
+	
+	@Test 
+	public void starts_in_first_pay_range_ends_in_second_pay_range() {
+		
+		// Act 
+		int result = familyOne.secondPayCalc(10,12);
+		int expected = 35; 
+		// Assert
 		Assert.assertEquals(expected, result);
 		
 	}
