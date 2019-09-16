@@ -18,8 +18,7 @@ public class FamilyOne {
 	}
 	
 	
-	// Checking if Project is Connected to Git Repo 
-	// Still not working 
+	// Hope this works
 	
 
 }
