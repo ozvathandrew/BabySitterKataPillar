@@ -23,7 +23,34 @@ public class FamilyThree {
 	}
 	
 	public int secondPayCalc(int startTime, int endTime) {
-		return 0; 
+		
+		int firstPayRangeHours = firstPayRateEnds - startTime; 
+		int secondPayRangeHours = 0; 
+		
+		switch(endTime) {
+		case 10: 
+			secondPayRangeHours = 1; 
+			break; 
+		case 11: 
+			secondPayRangeHours = 2; 
+			break; 
+		case 12:
+			secondPayRangeHours = 3; 
+			break; 
+		case 1:
+			secondPayRangeHours = 4; 
+			break; 
+		case 2:
+			secondPayRangeHours = 5;
+			break; 
+		case 3:
+			secondPayRangeHours = 6; 
+			break; 
+		case 4:
+			secondPayRangeHours = 7;
+			break; 
+		}
+		return ((firstPayRangeHours) * firstRate) + ((secondPayRangeHours) * secondRate);
 	}
 
 }
