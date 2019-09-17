@@ -52,6 +52,10 @@ public class FamilyThree {
 		}
 		return ((firstPayRangeHours) * firstRate) + ((secondPayRangeHours) * secondRate);
 	}
+	
+	public int thirdPayCalc(int startTime, int endTime) {
+		return 0; 
+	}
 
 }
 
