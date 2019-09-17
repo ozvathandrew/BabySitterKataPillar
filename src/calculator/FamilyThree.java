@@ -21,6 +21,10 @@ public class FamilyThree {
 	public int firstPayCalc(int startTime, int endTime) {
 		return (endTime - startTime)*firstRate;
 	}
+	
+	public int secondPayCalc(int startTime, int endTime) {
+		return 0; 
+	}
 
 }
 
