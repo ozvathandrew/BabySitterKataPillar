@@ -19,13 +19,16 @@ public class FamilyTwo {
 	}
 	
 	public int firstPayCalc(int startTime, int endTime) {
-		int payment = (endTime - startTime) * 12; 
-		return payment; 
+		return (endTime - startTime) * firstRate; 
+		 
 	}
 	
 	public int secondPayCalc(int startTime, int endTime) {
 		
-		return 0;
+		int firstPayRangeHours = beginSecondRate - startTime;
+		int secondPayRangeHours = beginThirdRate - endTime; 
+		
+		return (firstPayRangeHours * firstRate) + (secondPayRangeHours * secondRate);
 	}
 	
 //	Family Two 
