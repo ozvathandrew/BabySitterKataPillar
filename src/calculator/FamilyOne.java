@@ -16,13 +16,13 @@ public class FamilyOne {
 		this.secondRate = 20;
 	}
 
-	public int firstPayCalc(int startTime, int endTime) {
+	public int firstPayCalc(int startTime, int endTime) { // 1 - 1 
 		int payment = (endTime - startTime)*firstRate;
 		return payment; 
 	}
 	
 	
-	public int secondPayCalc(int startTime, int endTime) { 
+	public int secondPayCalc(int startTime, int endTime) { // 1 - 2 
 		
 		int firstPayRangeHours = firstPayRateEnds - startTime; 
 		int secondPayRangeHours = 0; 
@@ -49,7 +49,7 @@ public class FamilyOne {
 		return payment; 
 	}
 	
-	public int thirdPaymentCalc(int startTime, int endTime) { // 12 , 3 
+	public int thirdPaymentCalc(int startTime, int endTime) { // 2 - 2 
 		
 		int payment = 0; 
 		
