@@ -56,9 +56,9 @@ public class FamilyOne {
 		if(startTime == 12) {
 			return payment = endTime * secondRate; 
 		} return payment = (endTime - startTime) * secondRate;
-		
-		 
 	}
+	
+	
 	
 
 	
