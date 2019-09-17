@@ -54,7 +54,19 @@ public class FamilyThree {
 	}
 	
 	public int thirdPayCalc(int startTime, int endTime) {
-		return 0; 
+		
+		int hoursBeforeMidnight = 0; 
+		int hoursAfterMidnight = 0; 
+		
+		if(startTime < 12 && endTime != 12) {
+			hoursBeforeMidnight = 12 - startTime; 
+			hoursAfterMidnight = endTime; 
+			return (hoursBeforeMidnight + hoursAfterMidnight) * secondRate; 
+		} else if(startTime < 12 && endTime == 12) {
+			return (endTime - startTime) * secondRate; 
+		} else if(startTime == 12) {
+			return endTime * secondRate; 
+		} return (endTime - startTime) * secondRate; 
 	}
 
 }
