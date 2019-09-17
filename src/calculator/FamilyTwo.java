@@ -5,9 +5,10 @@ public class FamilyTwo {
 	private int firstRate; 
 	private int secondRate;
 	private int thirdRate; 
-	private final int firstPayRateBegins = 5;
-	private final int firstPayRateEnds = 11; 
-	private final int secondPayRateEnds = 4; 
+	private final int timeIn = 5;
+	private final int beginSecondRate = 10; 
+	private final int beginThirdRate = 12;
+	private final int timeOut = 4; 
 	
 	
 	public FamilyTwo(int firstRate, int secondRate, int thirdRate) {
@@ -20,6 +21,11 @@ public class FamilyTwo {
 	public int firstPayCalc(int startTime, int endTime) {
 		int payment = (endTime - startTime) * 12; 
 		return payment; 
+	}
+	
+	public int secondPayCalc(int startTime, int endTime) {
+		
+		return 0;
 	}
 	
 //	Family Two 
