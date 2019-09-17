@@ -42,7 +42,7 @@ public class FamilyOneTest {
 	@Test 
 	public void start_and_ends_in_second_pay_range() {
 		// Act 
-		int result = familyOne.thirdPaymentCalc(12, 3);
+		int result = familyOne.thirdPaymentCalc(12,3);
 		int expected = 60; 
 		// Assert 
 		Assert.assertEquals(expected, result);

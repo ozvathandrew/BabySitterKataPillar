@@ -49,11 +49,15 @@ public class FamilyOne {
 		return payment; 
 	}
 	
-	public int thirdPaymentCalc(int startTime, int endTime) {
+	public int thirdPaymentCalc(int startTime, int endTime) { // 12 , 3 
 		
+		int payment = 0; 
 		
+		if(startTime == 12) {
+			return payment = endTime * secondRate; 
+		} return payment = (endTime - startTime) * secondRate;
 		
-		return 0; 
+		 
 	}
 	
 
