@@ -17,8 +17,8 @@ public class FamilyOne {
 	}
 
 	public int firstPayCalc(int startTime, int endTime) { // 1 - 1 
-		int payment = (endTime - startTime)*firstRate;
-		return payment; 
+		return (endTime - startTime)*firstRate;
+		 
 	}
 	
 	
@@ -45,17 +45,15 @@ public class FamilyOne {
 			break; 
 		}
 		
-		int payment = ((firstPayRangeHours) * firstRate) + ((secondPayRangeHours) * secondRate); 
-		return payment; 
+		return ((firstPayRangeHours) * firstRate) + ((secondPayRangeHours) * secondRate); 
+		
 	}
 	
 	public int thirdPaymentCalc(int startTime, int endTime) { // 2 - 2 
 		
-		int payment = 0; 
-		
 		if(startTime == 12) {
-			return payment = endTime * secondRate; 
-		} return payment = (endTime - startTime) * secondRate;
+			return endTime * secondRate; 
+		} return (endTime - startTime) * secondRate;
 	}
 	
 	

@@ -19,7 +19,7 @@ public class FamilyThree {
 
 
 	public int firstPayCalc(int startTime, int endTime) {
-		return 0; 
+		return (endTime - startTime)*firstRate;
 	}
 
 }
