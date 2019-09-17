@@ -49,6 +49,13 @@ public class FamilyOne {
 		return payment; 
 	}
 	
+	public int thirdPaymentCalc(int startTime, int endTime) {
+		
+		
+		
+		return 0; 
+	}
+	
 
 	
 
