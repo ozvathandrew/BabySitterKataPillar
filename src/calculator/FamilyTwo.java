@@ -31,6 +31,10 @@ public class FamilyTwo {
 		return (firstPayRangeHours * firstRate) + (secondPayRangeHours * secondRate);
 	}
 	
+	public int thirdPayCalc(int startTime, int endTime) {
+		return 0; 
+	}
+	
 //	Family Two 
 //	Pays $ 12per hour for from 5 to 10 (5 hours) - int firstPayRate
 //	Pays $ 8per hour from 10 to 12 (2 hours) - int secondPayRate

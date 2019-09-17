@@ -40,5 +40,16 @@ public class FamilyTwoTest {
 		Assert.assertEquals(expected, result);
 		
 	}
+	
+	@Test
+	public void start_in_first_end_in_third_payrate() {
+		
+		// Act 
+		int result = familyTwo.thirdPayCalc(5, 3);
+		int expected = 124;
+		
+		// Assert
+		Assert.assertEquals(expected, result);
+	}
 
 }
