@@ -3,7 +3,11 @@ package calculator;
 public class FamilyOne {
 	
 	private int firstRate; 
-	private int secondRate; 
+	private int secondRate;
+	private int firstPayRateBegins = 5;
+	private int firstPayRateEnds = 11; 
+	private int secondPayRateEnds = 4; 
+	
 	
 	
 	public FamilyOne(int firstRate, int secondRate) {
@@ -18,10 +22,34 @@ public class FamilyOne {
 	}
 	
 	
-	public int secondPayCalc(int startTime, int endTime) {
-		int payment = 0; 
+	public int secondPayCalc(int startTime, int endTime) { 
+		
+		int firstPayRangeHours = firstPayRateEnds - startTime; 
+		int secondPayRangeHours = 0; 
+		
+		switch(endTime) {
+		case 12: 
+			secondPayRangeHours = 1; 
+			break; 
+		case 1: 
+			secondPayRangeHours = 2; 
+			break; 
+		case 2:
+			secondPayRangeHours = 3; 
+			break; 
+		case 3:
+			secondPayRangeHours = 4; 
+			break; 
+		case 4:
+			secondPayRangeHours = 5;
+			break; 
+		}
+		
+		int payment = ((firstPayRangeHours) * firstRate) + ((secondPayRangeHours) * secondRate); 
 		return payment; 
 	}
+	
+
 	
 
 }
