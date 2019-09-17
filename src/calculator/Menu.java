@@ -39,6 +39,14 @@ public class Menu {
 		return endTime;
 	}
 	
+	public void printPayment() {
+		CalculatorCLI calculatorCli = new CalculatorCLI();
+		if(selectFamily().equals("1")) {
+			out.println("You expected payment is: " + calculatorCli.familyOneCalc(startTime(), endTime()));
+		}
+		
+	}
+	
 	
 	public void printMsgToUser(String msg) {
 		out.println(msg + "\n");

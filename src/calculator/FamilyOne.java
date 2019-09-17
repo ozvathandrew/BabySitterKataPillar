@@ -42,8 +42,15 @@ public class FamilyOne {
 	
 	public int thirdPaymentCalc(int startTime, int endTime) { // 2 - 2 
 		
-		if(startTime == 12) {
+		if(startTime == 12 && endTime != 11) {
 			return endTime * secondRate; 
+			
+		} else if(startTime == 11 && endTime == 12) {
+			return secondRate; 
+			
+		} else if(startTime == 11 && endTime <= 4) {
+			return (endTime + 1) * secondRate;
+			
 		} return (endTime - startTime) * secondRate;
 	}
 	
