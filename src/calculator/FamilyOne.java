@@ -2,25 +2,16 @@ package calculator;
 
 public class FamilyOne {
 	
-	private int firstRate; 
-	private int secondRate;
-	private int firstPayRateBegins = 5;
-	private int firstPayRateEnds = 11; 
-	private int secondPayRateEnds = 4; 
+	private final int firstRate = 15; 
+	private final int secondRate = 20;
+	private final int firstPayRateBegins = 5;
+	private final int firstPayRateEnds = 11; 
+	private final int secondPayRateEnds = 4; 
 	
 	
-	
-	public FamilyOne(int firstRate, int secondRate) {
-		super();
-		this.firstRate = 15;
-		this.secondRate = 20;
-	}
-
 	public int firstPayCalc(int startTime, int endTime) { // 1 - 1 
-		return (endTime - startTime)*firstRate;
-		 
+		return (endTime - startTime)*firstRate; 
 	}
-	
 	
 	public int secondPayCalc(int startTime, int endTime) { // 1 - 2 
 		
