@@ -56,8 +56,8 @@ public class FamilyTwoTest {
 	public void start_in_second_end_in_third() {
 		
 		// Act 
-		int result = familyTwo.fourthPayCalc(10, 1);
-		int expected = 32;
+		int result = familyTwo.fourthPayCalc(11, 1);
+		int expected = 24;
 		
 		// Assert 
 		Assert.assertEquals(expected, result);

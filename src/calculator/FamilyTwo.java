@@ -35,7 +35,7 @@ public class FamilyTwo {
 	
 	public int fourthPayCalc(int startTime, int endTime) { // 2 - 3 
 		
-		int secondPayRangeHours = beginThirdRate - beginSecondRate;
+		int secondPayRangeHours = beginThirdRate - startTime;
 		int thirdPayRangeHours = endTime;
 		
 		return (secondPayRangeHours * secondRate ) + (thirdPayRangeHours * thirdRate);  

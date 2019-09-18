@@ -116,12 +116,14 @@ public class CalculatorCLI {
 		
 		FamilyTwo familyTwo = new FamilyTwo();
 		
-		if(startTime >= 5 && startTime < 10 && endTime > 5 && endTime <= 10 && startTime < endTime) {
+		if(startTime >= 5 && startTime < 10 && endTime > 5 && endTime <= 10 && startTime < endTime) { // 1 - 1 
 			payment = familyTwo.firstPayCalc(startTime, endTime);
-		} else if((startTime >= 5 && startTime < 10) && (endTime > 10 && endTime <= 12)) {
+		} else if((startTime >= 5 && startTime < 10) && (endTime > 10 && endTime <= 12)) { // 1 - 2 
 			payment = familyTwo.secondPayCalc(startTime, endTime);
-		} else if((startTime >= 5 && startTime < 10) && (endTime <= 4)) {
+		} else if((startTime >= 5 && startTime < 10) && (endTime <= 4)) { // 1 - 3 
 			payment = familyTwo.thirdPayCalc(startTime, endTime);
+		} else if((startTime >= 10 && startTime < 12) && (endTime <= 4)) { // 2 - 3 
+			payment = familyTwo.fourthPayCalc(startTime, endTime);
 		}
 		
 		return payment; 

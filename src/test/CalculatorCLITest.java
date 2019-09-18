@@ -127,14 +127,14 @@ public class CalculatorCLITest {
 	// Forth Calc
 	
 	@Test
-	public void family_two_calc_start_in_second_end_in_thrid_1() {
+	public void family_two_calc_start_in_second_end_in_third_1() {
 		int result = CalculatorCLI.familyTwoCalc(11,1);
 		int expected = 24; 
 		Assert.assertEquals(expected, result);
 	}
 	
 	@Test
-	public void family_two_calc_start_in_second_end_in_thrid_2() {
+	public void family_two_calc_start_in_second_end_in_third_2() {
 		int result = CalculatorCLI.familyTwoCalc(10,4);
 		int expected = 80; 
 		Assert.assertEquals(expected, result);
