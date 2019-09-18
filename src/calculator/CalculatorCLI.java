@@ -124,6 +124,8 @@ public class CalculatorCLI {
 			payment = familyTwo.thirdPayCalc(startTime, endTime);
 		} else if((startTime >= 10 && startTime < 12) && (endTime <= 4)) { // 2 - 3 
 			payment = familyTwo.fourthPayCalc(startTime, endTime);
+//		} else if((startTime == 12 || startTime < 4) && (endTime != 12 && endTime <= 4)){ // 3 - 3 
+//			payment = familyTwo.fifthPayCalc(startTime, endTime);
 		}
 		
 		return payment; 
