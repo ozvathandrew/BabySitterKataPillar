@@ -141,9 +141,9 @@ public class CalculatorCLI {
 		FamilyThree familyThree = new FamilyThree(); 
 		int payment = 0; 
 		
-//		if(startTime >= 5 && startTime < 9 && endTime > 5 && endTime <= 9 && startTime < endTime) {
-//			payment = familyThree.firstPayCalc(startTime, endTime); 
-//		}
+		if(startTime >= 5 && startTime < 9 && endTime > 5 && endTime <= 9 && startTime < endTime) {
+			payment = familyThree.firstPayCalc(startTime, endTime); 
+		}
 		
 		return payment; 
 	}
