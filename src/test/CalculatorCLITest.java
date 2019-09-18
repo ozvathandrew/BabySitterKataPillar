@@ -1,7 +1,5 @@
 package test;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -73,6 +71,19 @@ public class CalculatorCLITest {
 	public void family_one_calc_start_and_end_in_second_pay_range_2() {
 		int result = calculatorCli.familyOneCalc(11, 4);
 		int expected = 100; 
+		Assert.assertEquals(expected, result);
+	}
+	
+	@Test
+	public void family_two_calc_start_and_end_in_first_pay_range_1() {
+		int result = CalculatorCLI.familyTwoCalc(5,6);
+		int expected = 12; 
+		Assert.assertEquals(expected, result);
+	}
+	@Test
+	public void family_two_calc_start_and_end_in_first_pay_range_2() {
+		int result = CalculatorCLI.familyTwoCalc(5,10);
+		int expected = 60; 
 		Assert.assertEquals(expected, result);
 	}
 	

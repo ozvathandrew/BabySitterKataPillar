@@ -2,22 +2,15 @@ package calculator;
 
 public class FamilyTwo {
 	
-	private int firstRate; 
-	private int secondRate;
-	private int thirdRate; 
+	private final int firstRate = 12; 
+	private final int secondRate = 8;
+	private final int thirdRate = 16; 
 	private final int timeIn = 5;
 	private final int beginSecondRate = 10; 
 	private final int beginThirdRate = 12;
 	private final int timeOut = 4; 
 	
-	
-	public FamilyTwo(int firstRate, int secondRate, int thirdRate) {
-		super();
-		this.firstRate = firstRate;
-		this.secondRate = secondRate;
-		this.thirdRate = thirdRate; 
-	}
-	
+		
 	public int firstPayCalc(int startTime, int endTime) { // 1 - 1 
 		return (endTime - startTime) * firstRate; 
 		 

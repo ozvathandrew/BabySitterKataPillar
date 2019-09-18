@@ -2,71 +2,141 @@ package calculator;
 
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
 public class CalculatorCLI {
+	
 
 	public static void main(String[] args) {
-		CalculatorCLI application = new CalculatorCLI();
-		application.handleFamilyChoice();
+//		CalculatorCLI application = new CalculatorCLI();
+//		application.handleFamilyChoice();
+		
+		Scanner in = new Scanner(System.in);
+		PrintWriter out = new PrintWriter(System.out);
+		
+		String userChoice = familyChoice(); 
+		int timeIn = startTime();
+		int timeOut = endTime();
+		int payment = handleFamilyChoice(userChoice, timeIn, timeOut);
+		
+//		out.println(payment); 
+//		
+		printPayment(payment);
 	
 	}
 	
-	public void handleFamilyChoice() {
-		while(true) {
-			Menu menu = createMenu();
-			String userChoice = menu.selectFamily();
-			int startTime = menu.startTime();
-			int endTime = menu.endTime();
-			
+	public static String familyChoice() {
+		
+		Scanner in = new Scanner(System.in);
+		PrintWriter out = new PrintWriter(System.out); 
+		
+		out.println("Please Select Which Family You're Babysitting For");
+		out.println("1) Family 1");
+		out.println("2) Family 2");
+		out.println("3) Family 3");
+		out.flush();
+		String userChoice = in.nextLine();
+		return userChoice;
+		
+	}
+	
+	public static int startTime() {
+		
+		Scanner in = new Scanner(System.in);
+		PrintWriter out = new PrintWriter(System.out); 
+		
+		out.println("What time did you start?");
+		out.flush();
+		int startTime = Integer.parseInt(in.nextLine());
+		return startTime;
+	}
+	
+	public static int endTime() {
+		
+		Scanner in = new Scanner(System.in);
+		PrintWriter out = new PrintWriter(System.out); 
+		
+		out.println("What time did you leave?");
+		out.flush();
+		int endTime = Integer.parseInt(in.nextLine());
+		return endTime;
+	}
+	
+	public static void printPayment(int payment) {
+		Scanner in = new Scanner(System.in);
+		PrintWriter out = new PrintWriter(System.out);
+		
+		out.print("Your Expected Payment is $" + payment);
+		out.flush();
+	}
+		
+	public static int handleFamilyChoice(String userChoice, int startTime, int endTime) {
+		
+		Scanner in = new Scanner(System.in);
+		PrintWriter out = new PrintWriter(System.out); 
+	
+		int payment = 0;
+		
 			if(userChoice.equals("1")) {
-				familyOneCalc(startTime, endTime);
-				break;
+				payment = familyOneCalc(startTime, endTime);
+				
 			} else if (userChoice.equals("2")) {
-				familyTwoCalc(startTime, endTime);
-				break;
+				payment = familyTwoCalc(startTime, endTime);
+				
 			} else if(userChoice.equals("3")) {
-				familyThreeCalc(startTime, endTime);
-				break;
-			} else {
-				menu.printMsgToUser("*** Please select a valid choice ***");
+				payment = familyThreeCalc(startTime, endTime);
+				
 			}
+			
+			return payment;			
 		}
-	}
 	
-	public int familyOneCalc(int startTime, int endTime) {
-		while(true) {
-			Menu menu = createMenu();
+	public static int familyOneCalc(int startTime, int endTime) {
+		
+	
 			FamilyOne familyOne = new FamilyOne();
+			int payment = 0; 
 			
 			if(startTime >= 5 && startTime < 11 && endTime > 5 && endTime <= 11 && startTime < endTime) {
-				return familyOne.firstPayCalc(startTime, endTime);
+				payment = familyOne.firstPayCalc(startTime, endTime);
 				
 			} else if ((startTime >= 5 && startTime < 11) && (endTime == 12 || endTime <= 4)) {
-				return familyOne.secondPayCalc(startTime, endTime);
+				 payment = familyOne.secondPayCalc(startTime, endTime);
 				
 			} else if ((startTime >= 11 || startTime < 4) && (endTime == 12 || endTime <= 4)) {
-				return familyOne.thirdPaymentCalc(startTime, endTime);
+				payment =  familyOne.thirdPaymentCalc(startTime, endTime);
 				
-			} else {
-				menu.printMsgToUser("*** Hours not valid ***");
 			}
-			return 0;	
+			return payment;	
 		}
-	}
 	
-	public int familyTwoCalc(int startTime, int endTime) {
+	public static int familyTwoCalc(int startTime, int endTime) {
 		int payment = 0; 
+		
+		FamilyTwo familyTwo = new FamilyTwo();
+		
+		if(startTime >= 5 && startTime < 10 && endTime > 5 && endTime <= 10 && startTime < endTime) {
+			payment = familyTwo.firstPayCalc(startTime, endTime);
+//		} else if((startTime >= 5 && startTime < 10) && (endTime > 10 && endTime <= 12)) {
+//			payment = familyTwo.secondPayCalc(startTime, endTime);
+//		} else if((startTime >= 5 && startTime < 10) && (endTime <= 4)) {
+//			payment
+		}
 		
 		return payment; 
 	}
 	
-	public int familyThreeCalc(int startTime, int endTime) {
+//	Family Two 
+//	Pays $ 12per hour for from 5 to 10 (5 hours) - int firstPayRate
+//	Pays $ 8per hour from 10 to 12 (2 hours) - int secondPayRate
+//	Pays $ 16per hour from 12 to 4 (4 hours) - int thirdPayRate
+	
+	public static int familyThreeCalc(int startTime, int endTime) {
 		int payment = 0; 
 		
 		return payment; 
 	}
-	
-	
 	
 
 	
