@@ -15,7 +15,7 @@ public class FamilyTwoTest {
 	
 	@Before 
 	public void setup(){
-		familyTwo = new FamilyTwo(12, 8, 16); 
+		familyTwo = new FamilyTwo(); 
 	}
 
 	@Test
