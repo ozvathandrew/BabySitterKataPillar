@@ -92,6 +92,12 @@ public class CalculatorCLITest {
 		int expected = 20; 
 		Assert.assertEquals(expected, result);
 	}
+	@Test
+	public void family_two_calc_start_in_first_end_in_second_2() {
+		int result = CalculatorCLI.familyTwoCalc(5,12);
+		int expected = 76; 
+		Assert.assertEquals(expected, result);
+	}
 	
 
 }
