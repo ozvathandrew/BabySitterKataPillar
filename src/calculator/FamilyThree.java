@@ -2,19 +2,18 @@ package calculator;
 
 public class FamilyThree {
 	
-	private int firstRate; 
-	private int secondRate;
+	private final int firstRate = 21; 
+	private final int secondRate = 15;
 	private final int firstPayRateBegins = 5;
 	private final int firstPayRateEnds = 9; 
 	private final int secondPayRateEnds = 4; 
 	
 	
-	
-	public FamilyThree(int firstRate, int secondRate) {
-		super();
-		this.firstRate = firstRate;
-		this.secondRate = secondRate;
-	}
+//	public FamilyThree(int firstRate, int secondRate) {
+//		super();
+//		this.firstRate = firstRate;
+//		this.secondRate = secondRate;
+//	}
 
 
 

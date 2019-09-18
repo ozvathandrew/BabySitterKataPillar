@@ -137,11 +137,20 @@ public class CalculatorCLI {
 //	Pays $ 16per hour from 12 to 4 (4 hours) - int thirdPayRate
 	
 	public static int familyThreeCalc(int startTime, int endTime) {
+		
+		FamilyThree familyThree = new FamilyThree(); 
 		int payment = 0; 
+		
+//		if(startTime >= 5 && startTime < 9 && endTime > 5 && endTime <= 9 && startTime < endTime) {
+//			payment = familyThree.firstPayCalc(startTime, endTime); 
+//		}
 		
 		return payment; 
 	}
 	
+// Family Three
+//Pays $ 21per hour 5 to 9 (4 hours) - int firstPayRate	
+//Pays $15per hour 9 to 4 (7 hours) - int secondPayRate 
 
 	
 	public Menu createMenu() {

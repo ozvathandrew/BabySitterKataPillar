@@ -162,6 +162,26 @@ public class CalculatorCLITest {
 		Assert.assertEquals(expected, result);
 	}
 	
+	// Family Three Calc 
+	
+	// First Calc 
+	
+	@Test 
+	public void family_three_calc_start_and_end_in_first_pay_range_1() {
+		int result = CalculatorCLI.familyThreeCalc(5, 6);
+		int expected = 21; 
+		
+		Assert.assertEquals(expected, result);
+	}
+	
+	@Test 
+	public void family_three_calc_start_and_end_in_first_pay_range_2() {
+		int result = CalculatorCLI.familyThreeCalc(5, 9);
+		int expected = 84; 
+		
+		Assert.assertEquals(expected, result);
+	}
+	
 	
 
 }

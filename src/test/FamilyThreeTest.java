@@ -13,7 +13,7 @@ public class FamilyThreeTest {
 	
 	@Before 
 	public void setup() {
-		familyThree = new FamilyThree(21,15);
+		familyThree = new FamilyThree();
 	}
 	
 	@Test 
