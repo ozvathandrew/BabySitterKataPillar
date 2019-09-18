@@ -35,7 +35,7 @@ public class FamilyThreeTest {
 	@Test 
 	public void start_and_end_in_third_pay_range() {
 		int result = familyThree.thirdPayCalc(10, 3);
-		int expected = 75; 
+		int expected = 15; 
 		Assert.assertEquals(expected, result);
 	}
 

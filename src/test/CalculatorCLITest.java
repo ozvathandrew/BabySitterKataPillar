@@ -200,6 +200,26 @@ public class CalculatorCLITest {
 		Assert.assertEquals(expected, result);
 	}
 	
+	// Third Pay Calc 
+	
+	@Test
+	public void family_three_calc_start_and_end_in_third_1() {
+		int result = CalculatorCLI.familyThreeCalc(9, 10);
+		int expected = 15; 
+		
+		Assert.assertEquals(expected, result);
+		
+	}
+	
+	@Test
+	public void family_three_calc_start_and_end_in_third_2() {
+		int result = CalculatorCLI.familyThreeCalc(9, 4);
+		int expected = 105; 
+		
+		Assert.assertEquals(expected, result);
+		
+	}
+	
 	
 	
 
