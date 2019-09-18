@@ -14,6 +14,8 @@ public class CalculatorCLITest {
 	public void setup() {
 		calculatorCli = new CalculatorCLI();
 	}
+	
+	// Family One Calc
 
 	@Test
 	public void family_one_calc_first_and_end_in_first_pay_range_1() {
@@ -74,6 +76,8 @@ public class CalculatorCLITest {
 		Assert.assertEquals(expected, result);
 	}
 	
+	// Family Two Calc
+	
 	@Test
 	public void family_two_calc_start_and_end_in_first_pay_range_1() {
 		int result = CalculatorCLI.familyTwoCalc(5,6);
@@ -97,6 +101,22 @@ public class CalculatorCLITest {
 		int result = CalculatorCLI.familyTwoCalc(5,12);
 		int expected = 76; 
 		Assert.assertEquals(expected, result);
+	}
+	
+	@Test
+	public void family_two_calc_start_in_first_end_in_third_1() {
+		int result = CalculatorCLI.familyTwoCalc(9,1);
+		int expected = 48; 
+		Assert.assertEquals(expected, result);
+	
+	}
+	
+	@Test
+	public void family_two_calc_start_in_first_end_in_third_2() {
+		int result = CalculatorCLI.familyTwoCalc(5,4);
+		int expected = 140; 
+		Assert.assertEquals(expected, result);
+	
 	}
 	
 
