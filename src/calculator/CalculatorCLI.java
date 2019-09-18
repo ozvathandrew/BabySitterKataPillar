@@ -143,6 +143,8 @@ public class CalculatorCLI {
 		
 		if(startTime >= 5 && startTime < 9 && endTime > 5 && endTime <= 9 && startTime < endTime) {
 			payment = familyThree.firstPayCalc(startTime, endTime); 
+		} else if ((startTime >= 5 && startTime < 9) && (endTime > 9 && endTime <= 12) || (endTime <= 4)) {
+			payment = familyThree.secondPayCalc(startTime, endTime);
 		}
 		
 		return payment; 
